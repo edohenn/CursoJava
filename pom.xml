@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cl.cctchile.java.tutorial</groupId>
+	<artifactId>modulo_uno</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<developers>
+		<developer>
+			<email>gerardo.garrido.v@gmail.com</email>
+			<organization>cctchile</organization>
+			<timezone>-3</timezone>
+			<organizationUrl>http://www.cctchile.cl/</organizationUrl>
+			<name>Gerardo Garrido</name>
+			<roles>
+				<role>Desarrollador de sistemas</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>cctchile</name>
+		<url>http://www.cctchile.cl/</url>
+	</organization>
+
+	<properties>
+		<maven.plugin.resources>3.0.2</maven.plugin.resources>
+		<maven.plugin.compiler>3.6.1</maven.plugin.compiler>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.encoding>UTF-8</project.encoding>
+		<project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>dd-MM-yyyy HH:mm:ss</maven.build.timestamp.format>
+		<build_version>${project.version}</build_version>
+		<build_number>00001</build_number>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<!-- DEFINICION DE PLUGIN COMPILADOR -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.plugin.compiler}</version>
+					<configuration>
+						<encoding>${project.encoding}</encoding>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<!-- DEFINICION DE ENCODING DE RECURSOS -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven.plugin.resources}</version>
+					<configuration>
+						<encoding>${project.encoding}</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<modules>
+		<module>estructura</module>
+		<module>tiposdedatos</module>
+		<module>instruccionescontrol</module>
+		<module>ejerciciouno</module>
+		<module>poo</module>
+		<module>excepciones</module>
+	</modules>
+</project>
